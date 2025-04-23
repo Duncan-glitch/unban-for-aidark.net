@@ -1,18 +1,19 @@
-<iframe id="myIframe" src="about:blank" width="800" height="600" frameborder="0"></iframe>
-
-<script>
-    var iframe = document.getElementById("myIframe");
-    var iframeDocument = iframe.contentWindow.document;
-
-    // Open the iframe document to write content
-    iframeDocument.open();
-
-    // Write a script that redirects to a specific URL
-    iframeDocument.write(`
-        <script>
-            window.location.href = "https://www.aidark.net";
-        </script>
-    `);
-
-    iframeDocument.close();
-</script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>aidark.net Unblock</title>
+    <style>
+      html, body, iframe {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        border: none;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <iframe src="https://aidark.net" frameborder="0" allowfullscreen></iframe>
+  </body>
+</html>
