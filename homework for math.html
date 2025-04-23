@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>aidark.net Unblock</title>
-    <style>
-      html, body, iframe {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        border: none;
-        overflow: hidden;
+    <title>aidark.net Viewer</title>
+    <script>
+      async function loadPage() {
+        const res = await fetch("https://api.allorigins.win/raw?url=" + encodeURIComponent("https://aidark.net"));
+        const html = await res.text();
+        document.getElementById("viewer").innerHTML = html;
       }
-    </style>
+      window.onload = loadPage;
+    </script>
   </head>
   <body>
-    <iframe src="https://aidark.net" frameborder="0" allowfullscreen></iframe>
+    <div id="viewer">Loading...</div>
   </body>
 </html>
